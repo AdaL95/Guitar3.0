@@ -35,4 +35,9 @@ public static  Connection getConnection() {
 			}
 		}
 	}
+
+	public static Connection open() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

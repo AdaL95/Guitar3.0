@@ -12,6 +12,42 @@ public class GuitarSpec {
   private int numStrings;
   private String backWood;
   private String topWood;
+public String getBuilder() {
+	return builder;
+}
+public void setBuilder(String builder) {
+	this.builder = builder;
+}
+public String getModel() {
+	return model;
+}
+public void setModel(String model) {
+	this.model = model;
+}
+public String getType() {
+	return type;
+}
+public void setType(String type) {
+	this.type = type;
+}
+public int getNumStrings() {
+	return numStrings;
+}
+public void setNumStrings(int numStrings) {
+	this.numStrings = numStrings;
+}
+public String getBackWood() {
+	return backWood;
+}
+public void setBackWood(String backWood) {
+	this.backWood = backWood;
+}
+public String getTopWood() {
+	return topWood;
+}
+public void setTopWood(String topWood) {
+	this.topWood = topWood;
+}
 
   public GuitarSpec(String builder, String model, String type,
                     int numStrings, String backWood, String topWood) {
@@ -23,29 +59,7 @@ public class GuitarSpec {
     this.topWood = topWood;
   }
 
-  public String getBuilder() {
-    return builder;
-  }
 
-  public String getModel() {
-    return model;
-  }
-
-  public String getType() {
-    return type;
-  }
-
-  public int getNumStrings() {
-    return numStrings;
-  }
-
-  public String getBackWood() {
-    return backWood;
-  }
-
-  public String getTopWood() {
-    return topWood;
-  }
 
   public boolean matches(GuitarSpec otherSpec) {
     if (builder != otherSpec.builder)

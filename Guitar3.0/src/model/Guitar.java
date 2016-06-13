@@ -12,10 +12,16 @@ public class Guitar {
     this.spec = spec;
   }
 
-  public String getSerialNumber() {
+  public Guitar() {
+	// TODO Auto-generated constructor stub
+}
+
+public String getSerialNumber() {
     return serialNumber;
   }
-
+public void setPrice(double price){
+	this.price = price;
+}
   public double getPrice() {
     return price;
   }
@@ -27,4 +33,34 @@ public class Guitar {
   public GuitarSpec getSpec() {
     return spec;
   }
+
+public String getbuilder() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public String getmodel() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public String gettype() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public String getnumStrings() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public String gettopwood() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+public String getbackwood() {
+	// TODO Auto-generated method stub
+	return null;
+}
 }
