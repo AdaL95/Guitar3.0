@@ -10,12 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.IDAO.InventoryImpl;
-import com.IDAO.InventoryIDAO;
 
-import param.Builder;
-import param.Type;
-import param.Wood;
+import model.Builder;
+import model.Type;
+import model.Wood;
 import model.Guitar;
 import model.GuitarSpec;
 import model.Inventory;
@@ -50,7 +48,7 @@ public class searchGuitar extends HttpServlet {
 		//用户构想的吉他规格
 		 GuitarSpec whatErinLikes = new GuitarSpec(builder, model, 
 			       type, Integer.parseInt(numStrings),backwood, topwood);
-		 IDAO.InventoryIDAO inventoryIDAO=new InventoryImpl();
+		 dao.InventoryIDAO inventoryIDAO=new sqliteDAO.InventoryImpl();
 		 Inventory inventory=new Inventory();
 		    try{
 		    	inventory =inventoryIDAO.getInventorys();

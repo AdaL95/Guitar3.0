@@ -32,9 +32,9 @@ public class guitarIpml implements GuitarIDAO{
 				stmt.setString(3, guitar.getbuilder());
 				stmt.setString(4, guitar.getmodel());
 				stmt.setString(5, guitar.gettype());
-				stmt.setString(2, guitar.getnumStrings());
-				stmt.setString(3, guitar.gettopwood());
-				stmt.setString(4, guitar.getbackwood());
+				stmt.setString(6, guitar.getnumStrings());
+				stmt.setString(7, guitar.gettopwood());
+				stmt.setString(8, guitar.getbackwood());
 				
 				stmt.executeUpdate();
 			} catch (SQLException e) {
@@ -57,7 +57,7 @@ public class guitarIpml implements GuitarIDAO{
 		PreparedStatement stmt = null;
 		try {
 			stmt = connection.prepareStatement("Delete from Guitar where serialNumber=?");
-			stmt.setString(1, serialNumber);
+			stmt.setString(1, guitar.getSerialNumber());
 			stmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

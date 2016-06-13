@@ -7,6 +7,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import model.Guitar;
+import model.GuitarSpec;
+import sqliteDAO.guitarIpml;
+
 /**
  * Servlet implementation class delGuitar
  */
@@ -27,7 +31,11 @@ public class delGuitar extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String  serialNumber=request.getParameter("serialNumber");
+		
+		guitarIpml GuitarIDAO=new guitarIpml();
+		 Guitar guitar=new Guitar(serialNumber,whatErinLikes);
+
 	}
 
 	/**
